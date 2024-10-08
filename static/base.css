@@ -1,0 +1,553 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+}
+
+header .container {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header span {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: xx-large;
+}
+
+header .logo {
+    background-color: transparent; /* 确保背景色是透明的 */
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+.login a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    max-width: 1200px;
+    min-height: 680px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer-links {
+    margin-top: 20px;
+}
+.footer-links a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+textarea {
+    width: 100%;
+    height: 96%;
+    margin-bottom: 1px;
+    font-size: 16px;
+    padding: 1px;
+    border:dotted;
+}
+
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+#imgPreviewContainer {
+    margin: 10px 0;
+}
+
+#imgPreview {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    min-height: 700px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel, .right-panel {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    border: 2px dashed #ccc;
+    position: relative;
+}
+
+.left-panel img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.left-panel p {
+    margin: 0;
+    padding: 0;
+    color: #999;
+    font-size: 18px;
+}
+
+.left-panel input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.right-panel {
+    background-color: #fafafa;
+    overflow-y: auto;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0;
+}
+
+#header {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#header h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+#header .description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.language-selector {
+    align-self: start;
+    display: flex;
+    margin-top: 5px;
+    gap: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+    line-height: 150%;
+}
+@media (max-width: 991px) {
+    .language-selector {
+        white-space: initial;
+    }
+}
+.language-name {
+    font-family: DM Sans, sans-serif;
+    flex-grow: 1;
+}
+.language-icon {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 60px;
+    align-self: start;
+}
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.language-name {
+    cursor: pointer;
+}
+
+.lang-dropdown-content {
+    display: none;
+    right: -30px;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+    column-count: 2; /* 将列数设为2 */
+}
+
+.lang-dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.lang-dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.lang-dropdown:hover .lang-dropdown-content {
+    display: block;
+}
+.dropdown-item:hover {
+    background-color: #EFEFEF;
+}
+
+.name-generator-container {
+    text-align: center;
+}
+
+.generator-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.generator-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    min-height: 30px;
+}
+
+#generateBtn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#generateBtn:hover {
+    background-color: #45a049;
+}
+
+
+.faq {
+    margin: 20px 0;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.question {
+    font-weight: bold;
+    color: #0a0a0a;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+.answer {
+    display: none;
+    margin-top: 5px;
+    padding-left: 20px;
+    color: #555;
+}
+.icon {
+    font-size: 18px;
+    color: #0a0a0a;
+    transition: transform 0.3s;
+}
+.faq.open .icon {
+    transform: rotate(180deg);
+}
+
+.step-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 20px;
+}
+.step {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.step-icon {
+    font-size: 36px;
+    margin-right: 20px;
+    color: #4CAF50;
+    flex-shrink: 0;
+    text-align: center;
+    width: 50px;
+}
+.text {
+    font-size: 18px;
+}
+/* 更新和新增的样式 */
+.section-container {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.generator-container {
+    text-align: center;
+    margin-bottom: 0; /* 移除底部边距，因为现在由 section-container 控制 */
+    padding: 0; /* 移除内边距，因为现在由 section-container 控制 */
+    background-color: transparent; /* 移除背景色，使用 section-container 的背景色 */
+    border-radius: 0; /* 移除圆角，使用 section-container 的圆角 */
+    box-shadow: none; /* 移除阴影，使用 section-container 的阴影 */
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 120px;
+}
+.option label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+select:hover, select:focus {
+    border-color: #ee1515;
+    box-shadow: 0 0 0 2px rgba(238, 21, 21, 0.2);
+    outline: none;
+}
+#generateButton {
+    background-color: #ee1515;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+#generateButton:hover {
+    background-color: #cc0000;
+}
+#generateButton:active {
+    transform: translateY(2px);
+}
+#pokemonDisplay {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+    justify-items: center;
+}
+.pokemon-image {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.pokemon-image:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .options {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .option {
+        width: 100%;
+    }
+    #generateButton {
+        width: 100%;
+    }
+    #pokemonDisplay {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card i {
+    font-size: 2.5em;
+    color: #ee1515;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.site-footer {
+    background-color: white;
+    color: black;
+    border-top: 1px solid #e5e5e5;
+    padding: 20px 0;
+}
+
+.site-footer a {
+    color: black;
+}
+
+.site-footer p {
+    margin-bottom: 0;
+}
+
